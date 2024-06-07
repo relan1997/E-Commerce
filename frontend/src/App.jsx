@@ -18,7 +18,7 @@ function App() {
     </div>
     {/* <HomePage/> */}
     {/* <Product/> */}
-    <ProductDetails/>
+    <ProductDetails/> {/* pls fix iska css so look from https://youtu.be/glMRU2ER1q8?t=13319 */}
     <Footer/>
     </>
   )
