@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { Radio, RadioGroup } from "@headlessui/react";
-import { Button,Rating,Grid } from "@mui/material";
+import { Button,Rating,Grid,Box, LinearProgress } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
 
 const product = {
@@ -63,7 +63,7 @@ export default function ProductDetails() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white lg:px-2">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol
@@ -285,9 +285,68 @@ export default function ProductDetails() {
 
                     <Grid item xs={7}>
                         <div className="space-y-5">
-                        <ProductReviewCard/>
+                        {[1,1,1].map((item)=><ProductReviewCard/>)}
 
                         </div>
+                    </Grid>
+
+                    <Grid item xs={5}>
+                        <h1 className="text-xl font-semibold pb-1">Product Ratings</h1>
+                        <div className="flex items-center space-x-3">
+                            <Rating readOnly value={4.60} precision={.5}/>
+                            <p className="opacity-60">56383 Ratings</p>
+                        </div>
+                        <Box className="mt-5">
+                        <Grid container alignItems="center" gap={2}>
+                            <Grid item xs={2} >
+                                <p>Excellent</p>
+                            </Grid>
+                            <Grid item xs={7}>
+                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={40} color="success"/> 
+
+                            </Grid>
+                        </Grid>
+
+                        <Grid container alignItems="center" gap={2}>
+                            <Grid item xs={2} >
+                                <p>Excellent</p>
+                            </Grid>
+                            <Grid item xs={7}>
+                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={40} color="success"/> 
+
+                            </Grid>
+                        </Grid>
+
+                        <Grid container alignItems="center" gap={2}>
+                            <Grid item xs={2} >
+                                <p>Excellent</p>
+                            </Grid>
+                            <Grid item xs={7}>
+                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={40} color="success"/> 
+
+                            </Grid>
+                        </Grid>
+
+                        <Grid container alignItems="center" gap={2}>
+                            <Grid item xs={2} >
+                                <p>Excellent</p>
+                            </Grid>
+                            <Grid item xs={7}>
+                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={40} color="success"/> 
+
+                            </Grid>
+                        </Grid>
+
+                        <Grid container alignItems="center" gap={2}>
+                            <Grid item xs={2} >
+                                <p>Excellent</p>
+                            </Grid>
+                            <Grid item xs={7}>
+                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={40} color="success"/> 
+
+                            </Grid>
+                        </Grid>
+                        </Box>
                     </Grid>
 
                     </Grid>
