@@ -291,21 +291,13 @@ export default function ProductDetails() {
                     </Grid>
 
                     <Grid item xs={5}>
-                        <h1 className="text-xl font-semibold pb-1">Product Ratings</h1>
+                        <h1 className="text-xl font-semibold pb-2">Product Ratings</h1>
                         <div className="flex items-center space-x-3">
                             <Rating readOnly value={4.60} precision={.5}/>
                             <p className="opacity-60">56383 Ratings</p>
                         </div>
-                        <Box className="mt-5">
-                        <Grid container alignItems="center" gap={2}>
-                            <Grid item xs={2} >
-                                <p>Excellent</p>
-                            </Grid>
-                            <Grid item xs={7}>
-                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={40} color="success"/> 
-
-                            </Grid>
-                        </Grid>
+                        <Box className="mt-5 space-y-3">
+                        
 
                         <Grid container alignItems="center" gap={2}>
                             <Grid item xs={2} >
@@ -319,30 +311,39 @@ export default function ProductDetails() {
 
                         <Grid container alignItems="center" gap={2}>
                             <Grid item xs={2} >
-                                <p>Excellent</p>
+                                <p>Very Good</p>
                             </Grid>
                             <Grid item xs={7}>
-                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={40} color="success"/> 
+                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={30} color="success"/> 
 
                             </Grid>
                         </Grid>
 
                         <Grid container alignItems="center" gap={2}>
                             <Grid item xs={2} >
-                                <p>Excellent</p>
+                                <p>Good</p>
                             </Grid>
                             <Grid item xs={7}>
-                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={40} color="success"/> 
+                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={25} color="success"/> 
 
                             </Grid>
                         </Grid>
 
                         <Grid container alignItems="center" gap={2}>
                             <Grid item xs={2} >
-                                <p>Excellent</p>
+                                <p>Average</p>
                             </Grid>
                             <Grid item xs={7}>
-                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={40} color="success"/> 
+                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={20} color="warning"/> 
+
+                            </Grid>
+                        </Grid>
+                        <Grid container alignItems="center" gap={2}>
+                            <Grid item xs={2} >
+                                <p>Poor</p>
+                            </Grid>
+                            <Grid item xs={7}>
+                                <LinearProgress sx={{bgcolor:"#d0d0d0",borderRadius:4,height:7}} variant="determinate" value={15} color="error"/> 
 
                             </Grid>
                         </Grid>
