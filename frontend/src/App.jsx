@@ -8,6 +8,7 @@ import Footer from './customer/components/Footer/Footer'
 import Product from './customer/components/Product/Product'
 import ProductDetails from './customer/components/ProductDetails/ProductDetails'
 import Cart from './customer/components/Cart/Cart'
+import Checkout from './customer/components/Checkout/Checkout'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -19,7 +20,8 @@ function App() {
     {/* <HomePage/> */}
     {/* <Product/> */}
     {/* <ProductDetails/>*/} {/*pls fix iska css so look from https://youtu.be/glMRU2ER1q8?t=13319 */}
-    <Cart/>
+    {/* <Cart/> */}
+    <Checkout/>
     <Footer/>
     </>
   )
