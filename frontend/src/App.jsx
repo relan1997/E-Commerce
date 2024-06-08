@@ -21,7 +21,7 @@ function App() {
     {/* <Product/> */}
     {/* <ProductDetails/>*/} {/*pls fix iska css so look from https://youtu.be/glMRU2ER1q8?t=13319 */}
     {/* <Cart/> */}
-    <Checkout/>
+    <Checkout/>  {/* fix the location of the button from https://youtu.be/glMRU2ER1q8?t=18592 */}
     <Footer/>
     </>
   )
