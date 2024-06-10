@@ -10,6 +10,7 @@ import ProductDetails from './customer/components/ProductDetails/ProductDetails'
 import Cart from './customer/components/Cart/Cart'
 import Checkout from './customer/components/Checkout/Checkout'
 import Order from './customer/components/Order/Order'
+import OrderDetail from './customer/components/Order/OrderDetail'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -23,7 +24,8 @@ function App() {
     {/* <ProductDetails/>*/} {/*pls fix iska css so look from https://youtu.be/glMRU2ER1q8?t=13319 */}
     {/* <Cart/> */}
     {/* <Checkout/>*/}  {/*fix the location of the button from https://youtu.be/glMRU2ER1q8?t=18592 */}
-    <Order/>   {/* fix the css in the order card where the 3 components are coming one below the other view yt video from 5.30 */}
+    {/* <Order/>*/} {/*  fix the css in the order card where the 3 components are coming one below the other view yt video from 5.30 */}
+    <OrderDetail />
     <Footer/>
     </>
   )
