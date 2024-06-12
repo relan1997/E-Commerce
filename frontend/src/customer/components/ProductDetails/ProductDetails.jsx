@@ -5,6 +5,7 @@ import { Button,Rating,Grid,Box, LinearProgress } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
 import { mens_kurta } from "../../../Data/mens_kurta";
 import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
+import { useNavigate } from "react-router-dom";
 const product = {
   name: "Basic Tee 6-Pack",
   price: "$192",
@@ -60,8 +61,13 @@ function classNames(...classes) {
 }
 
 export default function ProductDetails() {
+  const navigate=useNavigate()
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
+
+  const handleAddToCart=()=>{
+    navigate('/cart')
+  }
 
   return (
     <div className="bg-white lg:px-2">
@@ -231,7 +237,7 @@ export default function ProductDetails() {
                     </RadioGroup>
                   </fieldset>
                 </div>
-                <Button variant='contained' sx={{px:'2rem',py:'1rem',bgcolor:'#9155fd'}}> {/* to understand variant and it's meaning https://chatgpt.com/c/ef2d4982-95c5-4ad8-b8ae-45b97e953028 */}
+                <Button onClick={handleAddToCart} variant='contained' sx={{px:'2rem',py:'1rem',bgcolor:'#9155fd'}}> {/* to understand variant and it's meaning https://chatgpt.com/c/ef2d4982-95c5-4ad8-b8ae-45b97e953028 */}
                   Add to Cart                  
                 </Button>
               </form>

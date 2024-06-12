@@ -11,22 +11,24 @@ import Cart from './customer/components/Cart/Cart'
 import Checkout from './customer/components/Checkout/Checkout'
 import Order from './customer/components/Order/Order'
 import OrderDetail from './customer/components/Order/OrderDetail'
+import { Route, Routes } from 'react-router-dom'
+import CustomerRouters from './Routers/CustomerRouters'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
     <div>
-    <Navigation/>
+      
+    <Routes>
+      <Route path='/*' element={<CustomerRouters/>}></Route>{/* path agar empty  slash ke form mai aaya toh yeh waala component trigger hoga*/}
+    </Routes>
+
+
+    
     </div>
-    {/* <HomePage/> */}
-    {/* <Product/> */}
-    {/* <ProductDetails/>*/} {/*pls fix iska css so look from https://youtu.be/glMRU2ER1q8?t=13319 */}
-    {/* <Cart/> */}
-    {/* <Checkout/>*/}  {/*fix the location of the button from https://youtu.be/glMRU2ER1q8?t=18592 */}
-    {/* <Order/>*/} {/*  fix the css in the order card where the 3 components are coming one below the other view yt video from 5.30 */}
-    <OrderDetail />
-    <Footer/>
+    
+    
     </>
   )
 }
